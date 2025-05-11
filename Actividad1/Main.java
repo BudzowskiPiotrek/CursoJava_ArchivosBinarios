@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Main {
     // creamos las variables staticas para el nombre del fichero y del propio
     // ArrayList
-    private static final String ARCHIVO = "asignaturas.obj";
+    private static final String ARCHIVO = "CursoJava_ArchivosBinarios/Actividad1/asignaturas.obj";
     private static ArrayList<Asignatura> asignaturas = new ArrayList<>();
 
     public static void main(String[] args) {
