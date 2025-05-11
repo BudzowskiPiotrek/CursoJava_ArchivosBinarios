@@ -68,10 +68,7 @@ public class Main {
     // Cargar datos desde archivo
     private static void cargarDatos() {
         try (FileInputStream fis = new FileInputStream(ARCHIVO)) {
-
             ObjectInputStream ois = new ObjectInputStream(fis);
-            // VOLCAMOS EL CONTENIDO DEL FICHERO EN NUESTRO ARRAYLIST PARA LO QUE
-            // NECESITAMOS MOLDEARLO
             asignaturas = (ArrayList<Asignatura>) ois.readObject();
         } catch (FileNotFoundException e) {
             // No existe aún, no hay datos
@@ -84,7 +81,6 @@ public class Main {
     private static void guardarDatos() {
         ObjectOutputStream oos = null;
         try (FileOutputStream fos = new FileOutputStream(ARCHIVO)) {
-            ;
             oos = new ObjectOutputStream(fos);
             oos.writeObject(asignaturas);
         } catch (IOException e) {
