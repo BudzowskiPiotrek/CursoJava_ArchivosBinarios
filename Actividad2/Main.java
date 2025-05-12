@@ -74,7 +74,10 @@ public class Main {
     private static void cargarDatos() {
         try (FileInputStream fis = new FileInputStream(ARCHIVO)) {
             ObjectInputStream ois = new ObjectInputStream(fis);
+
+            Libro.setContador(ois.readInt()); // CARGAMOS EL NUMERO ESTATICO GUARDADO
             libros = (ArrayList<Libro>) ois.readObject();
+
         } catch (FileNotFoundException e) {
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Error al cargar datos: " + e.getMessage());
@@ -86,7 +89,10 @@ public class Main {
         ObjectOutputStream oos = null;
         try (FileOutputStream fos = new FileOutputStream(ARCHIVO)) {
             oos = new ObjectOutputStream(fos);
+
+            oos.writeInt(Libro.getContador()); // PARA GUARDAR EL VALOR ESTATICO
             oos.writeObject(libros);
+            
         } catch (IOException e) {
             System.out.println("Error al guardar datos: " + e.getMessage());
         }
