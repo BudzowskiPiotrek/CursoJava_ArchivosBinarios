@@ -61,12 +61,12 @@ public class Contacto implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    public void verDatos (){
+
+    public void verDatos() {
         System.out.println("Id: " + id);
-        System.out.println("Nombre: "+nombre);
-        System.out.println("Telefono: "+telefono);
-        System.out.println("Email: "+email);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Telefono: " + telefono);
+        System.out.println("Email: " + email);
         System.out.println("----   -----   ----   ----");
     }
-
+}
