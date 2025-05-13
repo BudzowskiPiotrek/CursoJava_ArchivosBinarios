@@ -70,4 +70,3 @@ public class Contacto implements Serializable {
         System.out.println("----   -----   ----   ----");
     }
 
-}
