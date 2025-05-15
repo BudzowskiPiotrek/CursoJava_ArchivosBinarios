@@ -2,6 +2,7 @@
 
 ## 📝 Actividad 1
 
+
 Vamos a crear un programa que almacene en un fichero externo un listado de asignaturas, las asignaturas tendrán información sobre el nombre y los créditos y además el profesor que la imparte pero este último elemento no será serializable, es decir no se almacenará en el fichero por lo que cuando recojamos los campos no quedará guardado el profesor de cada asignatura.
 
 - ⚠️ El parametro serialVersionUID, no es un parámetro obligatorio pero si altamente recomendable. Es un identificador único que sirve para verificar la compatibilidad de versiones de una clase durante el proceso de deserialización.
