@@ -15,7 +15,7 @@ import java.util.List;
 public class Main {
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static List<Producto> productos = new ArrayList<>();
-    public final static String RUTA = "CursoJava_ArchivosBinarios/Actividad6/Datos";
+    public final static String RUTA = "CursoJava_ArchivosBinarios/Actividad6/Datos.obj";
 
     public static void main(String[] args) {
         cargarDatos();
@@ -26,6 +26,12 @@ public class Main {
         boolean condicion = true;
         while (condicion) {
             System.out.println("---- Menu Principal ----");
+            System.out.println("1. Añadir producto");
+            System.out.println("2. Listar productos");
+            System.out.println("3. Buscar producto por codigo");
+            System.out.println("4. Actualizar stock");
+            System.out.println("5. Eliminar producto");
+            System.out.println("6. Guardar y Salir");
 
             try {
                 int opcion = Integer.parseInt(br.readLine());
